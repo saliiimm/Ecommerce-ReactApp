@@ -7,7 +7,6 @@ const Homepage = () => {
   return (
     <>
       <Navbar />
-      <div>hello</div>
       <Acceuil />
       <LearnMore />
       <Footer />
