@@ -1,8 +1,11 @@
 import React from "react";
 import "./DetailsContent.css";
+import{ useState, useEffect } from 'react';
 import { BsCart3 } from "react-icons/bs";
 import { AiOutlinePlus,AiOutlineLine } from "react-icons/ai";
 const DetailsContent = () => {
+  const [qnt, setqnt] = useState(1);
+
   return (
     <div className="details">
       <div className="left-home">
@@ -34,7 +37,7 @@ const DetailsContent = () => {
           <div className="Quantity">
             <div className="qnt">
               
-              <p>Quantity</p> <div className="nbr"><AiOutlinePlus/>  1  <AiOutlineLine/></div>
+              <p>Quantity</p> <div className="nbr"><AiOutlinePlus onClick={()=>setqnt(qnt+1)}/>  {qnt}  <AiOutlineLine onClick={()=>setqnt(qnt > 1 ? qnt-1 : 1)}/></div>
             </div>
             <div className="two">
               <div className="select">
