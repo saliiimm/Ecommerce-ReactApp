@@ -1,6 +1,6 @@
 import "./Navbar.css";
-import { BsFillPersonFill } from "react-icons/bs";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { BsFillPersonFill,BsCart3 } from "react-icons/bs";
+
 import { Link } from "react-router-dom";
 import logoNav from "../../assets/logoNav.svg";
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
           <BsFillPersonFill />
         </Link>
         <Link to="/panier">
-          <AiOutlineShoppingCart />
+          <BsCart3/>
         </Link>
       </div>
     </nav>
