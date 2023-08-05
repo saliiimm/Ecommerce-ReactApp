@@ -3,6 +3,7 @@ import Footer from "../../components/footer/Footer";
 import Acceuil from "../../components/home/acceuil/Acceuil";
 import LearnMore from "../../components/home/learn_more/LearnMore";
 import Products from "../../components/productsHome/Products";
+import Popular from "../../components/PopularProducts/Popular";
 
 const Homepage = () => {
   return (
@@ -11,6 +12,7 @@ const Homepage = () => {
       <Acceuil />
       <Products />
       <LearnMore />
+      <Popular />
       <Footer />
     </>
   );
