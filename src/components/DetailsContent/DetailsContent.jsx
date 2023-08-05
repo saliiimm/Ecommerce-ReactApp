@@ -5,7 +5,7 @@ import { AiOutlinePlus,AiOutlineLine } from "react-icons/ai";
 const DetailsContent = () => {
   return (
     <div className="details">
-      <div className="left">
+      <div className="left-home">
       <div className="image">
       <img
           src="https://s3-alpha-sig.figma.com/img/5ac9/3086/b584cab7879f945efaa1208441b07917?Expires=1691971200&Signature=WZDvy3TEB9Ge6ygTMAGAC0cL1mZ6hAeA9bAx0~Ac8zEtyY2YciAc1-9ZZZ~8LbrRDTJvjR-9XtWy1ibZKQe5LStmHgJutba7USIZupUIaqgPYh1oZcIZbT8V8qN~kD-g3avAUuT54IRAGyQ3b0DH2BsV1du4FadvOqgEQE0quBD-oNaZoq1dHHqwlOnROoGgRY1Pw9a~eWA4r0OB62rrtA0MvJcyw2YrjphVHSnuQOi~Wy4UheXsNb1ZsvnWsHgqsthTJ~wtymvlpnl9Wlq~6mnNPNz2HmLTaEtBB5sM4Z8yNo7CD1svwFcAbpMmdKia01azpEheNqE5T-mRh-B-jA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -18,7 +18,7 @@ const DetailsContent = () => {
         </div>
        
       </div>
-      <div className="right">
+      <div className="right-home">
         <div className="title">Spiced Mint Candleaf®</div>
         <div className="Info">
           <div className="purchase">

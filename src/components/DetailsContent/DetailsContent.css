@@ -10,14 +10,14 @@
     margin-right: 172px;
     padding-bottom: 114px;
 }
-.left{
+.left-home{
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.right{
+.right-home{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -49,7 +49,7 @@ flex-shrink: 0;
      align-items: center;
      justify-content: center;
 }
-.left img{
+.left-home img{
     width: 528px;
 height: 396px;
 
@@ -88,7 +88,7 @@ flex-shrink: 0
 }
 
 .one{
-    padding-right: 186px;
+    padding-right: 170px;
 }
 .Quantity{
     display: flex;
