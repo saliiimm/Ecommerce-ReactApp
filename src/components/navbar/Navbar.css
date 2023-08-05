@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 70px;
+  background-color: white;
+  color: black;
+}
+.centre {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 250px;
+}
+.partieDroit > * {
+  font-size: 20px;
+}
+.partieDroit :first-child {
+  margin-right: 15px;
+}
+a {
+  color: black;
+}
