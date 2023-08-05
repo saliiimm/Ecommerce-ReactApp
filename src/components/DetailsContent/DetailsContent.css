@@ -8,6 +8,7 @@
     padding-top: 50px;
     padding-left: 172px;
     margin-right: 172px;
+    padding-bottom: 114px;
 }
 .left{
     width: 50%;
@@ -87,7 +88,7 @@ flex-shrink: 0
 }
 
 .one{
-    padding-right: 161px;
+    padding-right: 186px;
 }
 .Quantity{
     display: flex;
