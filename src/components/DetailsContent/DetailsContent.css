@@ -183,6 +183,12 @@ justify-content: center;
 border: none;
 margin-top: 67px;
 margin-left: 218px;
+transition: 0.2s;
+}
+.btn:hover{
+    color:#56B280;
+    background-color: white;
+    border: #56B280 2px solid;
 }
 .productDetails{
     width: 540px;
