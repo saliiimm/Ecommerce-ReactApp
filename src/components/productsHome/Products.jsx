@@ -22,20 +22,20 @@ const Products = () => {
       <h2>Products</h2>
       <p>Order it for you beloved ones </p>
       <div className="productCards">
-        {candles.map((candle, index) => (
-        <Link to={`/details/${candle.key}`}>
-          <div key={index} className="card">
-            <img src={candle.image} alt={candle.candleName} />
-            <div className="info">
-              <div className="titre">
-                <h3>{candle.candleName}</h3>
-              </div>
-              <div className="prix">
-                <p>{candle.price}$</p>
+        {candles.map((candle) => (
+          <Link key={candle.key} to={`/details/${candle.key}`}>
+            <div className="card">
+              <img src={candle.image} alt={candle.candleName} />
+              <div className="info">
+                <div className="titre">
+                  <h3>{candle.candleName}</h3>
+                </div>
+                <div className="prix">
+                  <p>{candle.price}$</p>
+                </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
         ))}
       </div>
     </div>
