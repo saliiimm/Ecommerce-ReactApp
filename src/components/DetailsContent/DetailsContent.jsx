@@ -7,6 +7,7 @@ const DetailsContent = (props) => {
   const [qnt, setqnt] = useState(1);
   const [cart, setCart] = useState([]); // État local pour le panier
   const candle = props.candle[0];
+  console.log(candle);
   const handleAddToCartClick = () => {
     const newItem = {
       id: candle.key, // Assurez-vous d'avoir une propriété unique pour chaque article
@@ -14,7 +15,7 @@ const DetailsContent = (props) => {
       price: candle.price,
       quantity: `${qnt}`,
     };
-    console.log(candle);
+   
 
     const updatedCart = [...cart, newItem]; // Créer une nouvelle copie du panier avec le nouvel élément
     setCart(updatedCart); // Mettre à jour l'état local du panier

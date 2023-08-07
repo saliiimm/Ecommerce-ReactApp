@@ -20,7 +20,7 @@ const Details = () => {
       .then((response) => {
         const data = response.data;
         // Filtrer les bougies en fonction de l'ID
-        const filteredCandles = data.candles.filter(candle => candle.key === id);
+        const filteredCandles = data.candles.filter(candle => candle.key === parseInt(id));
         setCandles(filteredCandles);
        
       })
