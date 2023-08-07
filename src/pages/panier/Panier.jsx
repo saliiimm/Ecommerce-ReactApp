@@ -1,13 +1,13 @@
-import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
-import Modal from "../../components/modalPayment/Modal";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Panier.css";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
 
 const Panier = () => {
   const [candles, setCandles] = useState([]);
+  let subtotal = 0;
 
   useEffect(() => {
     axios
@@ -15,24 +15,26 @@ const Panier = () => {
       .then((response) => {
         const data = response.data;
         setCandles(data.achats);
-        console.log(candles);
-     
-       
       })
       .catch((error) => {
         console.error(error);
       });
-    
   }, []);
-  
-  return (
-   
 
-    < div className="back" >
+  
+  const remove = (id) => {
+    const deletes = candles.filter((item) => item.id !== id);
+    setCandles(deletes);
+  };
+
+  return (
+    <div className="back">
       <Navbar />
       <div>
-        <h2  >Your card items</h2>
-         <Link className="a" to="/">Back to shopping</Link>
+        <h2>Your cart items</h2>
+        <Link className="a" to="/">
+          Back to shopping
+        </Link>
       </div>
       <div>
         <div className="shop">
@@ -43,31 +45,56 @@ const Panier = () => {
             <h4>Total</h4>
           </div>
         </div>
-        <hr className="hr" />
+        <hr className="hr hrs" />
         <div>
-        {candles.map((item) => (
-          
-            <div key={item.id}>
-              <p>{item.name}</p>
-              <p>${item.price}</p>
-        
-            </div>
-          ))}
+          {candles.map((item) => {
+            const total = (item.price * item.quantity).toFixed(2);
+
+            subtotal += parseFloat(total);
+
+            return (
+              <div key={item.id} className="shop">
+                <div className="flexx">
+                  <img
+                    src={item.image}
+                    className="small"
+                    alt={item.name}
+                  />
+                  <div className="pro">
+                    <p className="isem">{item.name}</p>
+                    <button
+                      className="remove"
+                      onClick={() => remove(item.id)} 
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+                <div className="shopp">
+                  <p>${item.price}</p>
+                  <p>{item.quantity}</p>
+                  <p>${total}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
         <hr className="hr" />
         <div className="rights">
-          <div className="pay" >
+          <div className="pay">
             <div className="align">
               <h4>Sub-total</h4>
-              <h4>$9.99</h4>
+              <h4>${subtotal.toFixed(2)}</h4>
             </div>
-            <p className="p">tax and shipping cost will calculated later</p>
+            <p className="p">
+              Tax and shipping cost will be calculated later
+            </p>
           </div>
-          <button className="button" >Check-out</button>
+          <button className="button">Check-out</button>
         </div>
       </div>
       <Footer />
-          </div>
+    </div>
   );
 };
 
