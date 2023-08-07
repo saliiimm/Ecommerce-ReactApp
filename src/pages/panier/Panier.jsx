@@ -2,7 +2,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import "./Panier.css"
 import { Link } from "react-router-dom";
-const Panier = ({ cartItems }) => {
+const Panier = ({  }) => {
  
 
   return (
@@ -23,13 +23,7 @@ const Panier = ({ cartItems }) => {
         </div>
         <hr className="hr" />
         <div>
-          {cartItems.map((item) => (
-            <div key={item.key}>
-              <p>{item.candleName}</p>
-              <p>${item.price}</p>
         
-            </div>
-          ))}
         </div>
         <hr className="hr" />
         <div className="rights">
