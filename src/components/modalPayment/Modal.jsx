@@ -120,7 +120,7 @@ const Modal = (props) => {
                     className="button-previous"
                     onClick={() => {
                       if (page === 1) {
-                        onClose();
+                         props.onClose();
                       } else {
                         setPage((prev) => prev - 1);
                       }
@@ -132,7 +132,7 @@ const Modal = (props) => {
                     onClick={() => {
                       if (page === FormTitles.length - 1) {
                         console.log(formData);
-                        onClose();
+                         props.onClose();
                       } else {
                         setPage((prev) => prev + 1);
                       }
