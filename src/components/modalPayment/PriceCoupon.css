@@ -39,7 +39,7 @@ font-weight: 500;
 line-height: 57.6px; /* 360% */
 letter-spacing: -0.9px;
 }
-.prix{
+.prix2{
   color: var(--green, #56B280);
 font-feature-settings: 'clig' off, 'liga' off;
 font-family: 'Poppins', sans-serif;

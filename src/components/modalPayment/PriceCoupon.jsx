@@ -15,7 +15,7 @@ const PriceCoupon = (props) => {
     <img src={candel.image} alt="" />
     <div className="infobox">
       <div className="titre">{candel.name}</div>
-      <div className="prix">${candel.price}</div>
+      <div className="prix2">${candel.price}</div>
     </div>
   </div>
 )})}

@@ -9,12 +9,12 @@ import { Formik, Form } from "formik";
 
 const Modal = (props) => {
   const [page, setPage] = useState(1);
-
+  console.log(props);
   const ModelRef = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (ModelRef.current && !ModelRef.current.contains(event.target)) {
-        onClose();
+        props.onClose();
       }
     };
 
