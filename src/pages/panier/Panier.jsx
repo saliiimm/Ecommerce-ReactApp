@@ -20,7 +20,21 @@ const Panier = () => {
       .catch((error) => {
         console.error(error);
       });
-  }, []);
+  }, [candles]);
+  const handleDelete = (itemId) => {
+    // Mise à jour de la base de données JSON (vous pouvez également utiliser une API pour cela)
+    fetch(`http://localhost:3000/achats/${itemId}`, {
+      method: "DELETE",
+    }).then((response) => {
+      if (response.ok) {
+        console.log(`Article avec ID ${itemId} supprimé avec succès.`);
+      } else {
+        console.error(
+          `Erreur lors de la suppression de l'article avec ID ${itemId}.`
+        );
+      }
+    });
+  };
 
   const remove = (id) => {
     const deletes = candles.filter((item) => item.id !== id);
@@ -59,7 +73,15 @@ const Panier = () => {
                   <img src={item.image} className="small" alt={item.name} />
                   <div className="pro">
                     <p className="isem">{item.name}</p>
-                    <button className="remove" onClick={() => remove(item.id)}>
+
+                    <button
+                      className="remove"
+                      onClick={() => remove(item.id)}
+                    />
+
+                    <button
+                      className="remove"
+                      onClick={() => handleDelete(item.id)}>
                       Remove
                     </button>
                   </div>

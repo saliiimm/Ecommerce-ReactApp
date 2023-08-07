@@ -6,23 +6,29 @@
   .aligns{
     display: flex;
     align-items: center;
-    margin-top: -4%;
+    margin-top: 0%;
     text-align: center;
     white-space: nowrap;
+  }
+  .container-text{
+    margin-bottom: 20px;
   }
   
   .accueil-introduction {
     display: flex;
     flex-direction: row;
-    max-width: 1000px;
+   justify-content: center;
+align-items: center;
+height: 800px;
     margin: auto;
     text-align: left;
     font-family: 'Poppins', sans-serif;
-   
+    background: #F7F8FA;
+    width: 100%;
   }
 .h1{
     font-size: 36px;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
 }
 .h2{
    color: rgb(92, 171, 92);
@@ -32,7 +38,7 @@
    
 }
 .leftcandle{
-    margin-top: 5%;
+    margin-top: -7%;
     width: 700px;
 }
 .imagecandle{

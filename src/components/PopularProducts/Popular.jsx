@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "../productsHome/Products.css";
 import { Link } from "react-router-dom";
+import "./popular.css"
 
 const Popular = () => {
   const [candles, setCandles] = useState([]);
@@ -29,7 +30,7 @@ const Popular = () => {
   const randomCandles = shuffleArray(candles).slice(0, 4);
 
   return (
-    <div className="products">
+    <div className="Popular">
       <h2>Popular</h2>
       <p>Our top selling product that you may like </p>
       <div className="productCards">

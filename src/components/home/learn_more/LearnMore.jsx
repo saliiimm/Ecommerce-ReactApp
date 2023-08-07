@@ -9,7 +9,7 @@ const LearnMore = () => {
     <div className="leftcandle">
         <h1 className="h1">Clean and <br /> fragrant soy wax</h1>
         <h2 className="h2">Made for your home and your wellness</h2>
-        <div>
+        <div className="container-text">
           <div className="aligns">
           <span  className="spans"> <AiOutlineCheckCircle/>  Eco-sustainable: </span> <p> All recyclable materials, 0% C02 spanissions.</p>
           </div>
