@@ -46,15 +46,15 @@ const Panier = () => {
           </div>
         </div>
         <hr className="hr hrs" />
-        <div>
+        <div className="itemContent">
           {candles.map((item) => {
             const total = (item.price * item.quantity).toFixed(2);
 
             subtotal += parseFloat(total);
 
             return (
-              <div key={item.id} className="shop">
-                <div className="flexx">
+              <div  className="shop">
+                <div className="flexx" >
                   <img
                     src={item.image}
                     className="small"

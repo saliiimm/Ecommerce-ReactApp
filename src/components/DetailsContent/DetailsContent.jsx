@@ -13,6 +13,7 @@ const DetailsContent = (props) => {
       id: candle.key, // Assurez-vous d'avoir une propriété unique pour chaque article
       name: candle.candleName,
       price: candle.price,
+      image: candle.image,
       quantity: `${qnt}`,
     };
    

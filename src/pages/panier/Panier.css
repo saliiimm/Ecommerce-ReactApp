@@ -67,6 +67,9 @@
     margin-top: -3.5%;
     margin-bottom: -3%;
 }
+.itemContent{
+    min-height: 40px;
+}
 .pan{
     display: flex;
   
