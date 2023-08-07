@@ -12,6 +12,7 @@ const PriceCoupon = (props) => {
     subtotal += parseFloat(total);  
     return(
   <div className="box" key={candel.id}> 
+  <div className="qntt">{ candel.quantity}</div>
     <img src={candel.image} alt="" />
     <div className="infobox">
       <div className="titre">{candel.name}</div>
