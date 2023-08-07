@@ -1,0 +1,7 @@
+.pricecoupon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f8fa;
+  color: black;
+}

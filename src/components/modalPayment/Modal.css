@@ -1,0 +1,223 @@
+/*modal:*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 75%;
+  height: auto;
+  max-height: 95%;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.form {
+  padding-bottom: 35px;
+  position: relative;
+}
+
+/*header & footer*/
+/*header:*/
+.progressBar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 10%;
+  margin-top: 10px;
+  margin-inline: 65px;
+}
+
+.progressBar img {
+  margin: 9px 0 22px 0;
+}
+
+.progressBar h3 {
+  margin: 0;
+  font-size: 12.5px;
+}
+
+/*footer:*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.button-next {
+  background-color: #56b280;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  width: 150px;
+}
+
+.button-previous {
+  background-color: transparent;
+  color: #56b280;
+  text-decoration: underline;
+  border: none;
+}
+
+/*Details Form:*/
+
+.DetailsFormContainer {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 65px;
+}
+
+.formofXPart {
+  width: 80%;
+}
+.contactForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contactForm h4,
+.shippingAddress h4 {
+  font-weight: 900;
+  margin: 0;
+}
+
+.contactForm p {
+  font-size: 12px;
+}
+
+.contactForm p span {
+  color: #56b280;
+  cursor: pointer;
+}
+
+.contactForm p span:hover {
+  text-decoration: underline;
+}
+
+.solofield {
+  width: 100%;
+  height: 25px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  border: solid 1px #56b280;
+}
+
+.check label {
+  font-size: 12.5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.check.contact {
+  margin-bottom: 50px;
+}
+input[type="checkbox"] {
+  accent-color: #56b280;
+}
+
+.shippingAddress {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.shippingAddress h4 {
+  margin-bottom: 7px;
+}
+.field-align.two {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 47.5%);
+  gap: 5%;
+  height: auto;
+  border: none;
+  padding-left: 5px;
+}
+
+.duofield {
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+  background-color: white;
+  border: solid 1px #56b280;
+}
+
+.field-align.three {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 31.66%);
+  gap: 4.98%;
+  height: auto;
+  border: none;
+  padding-left: 5px;
+}
+
+.triofield {
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+  background-color: white;
+  border: solid 1px #56b280;
+}
+
+.triofield.select {
+  position: relative;
+  width: 100%;
+  color: black;
+  height: 36px;
+}
+
+.triofield.select select {
+  width: 100%;
+  padding: 5px;
+  background-color: white;
+  border: solid 1px #56b280;
+  appearance: none; /* Remove default styles on the dropdown arrow */
+  -webkit-appearance: none;
+}
+
+.triofield.select::before {
+  content: "\25BC"; /* Unicode for the dropdown arrow */
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  color: #56b280; /* Arrow color */
+  pointer-events: none; /* Avoid hover/click on the arrow */
+}
+
+.selectCountry {
+  background-color: white;
+  border: solid 1px #56b280;
+  color: black;
+  margin: 3px;
+  width: 100%;
+  height: 33px;
+}
