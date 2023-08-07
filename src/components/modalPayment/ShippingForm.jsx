@@ -8,9 +8,10 @@ const ShippingForm = ({ formData, setFormData }) => {
         <div className="contactShipto">
           <div>
             <h4>Contact</h4>
-            <Field name="emailOrNumber" className="" />
+            <Field name="emailOrNumber" className="contactshipinput" />
             <h4>Edit</h4>
           </div>
+          <hr />
           <div>
             <h4>Ship to</h4>
             <Field className="" />

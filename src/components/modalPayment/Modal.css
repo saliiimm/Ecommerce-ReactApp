@@ -70,6 +70,7 @@
   border-radius: 5px;
   border: none;
   width: 150px;
+  cursor: pointer;
 }
 
 .button-previous {
@@ -77,6 +78,7 @@
   color: #56b280;
   text-decoration: underline;
   border: none;
+  cursor: pointer;
 }
 
 /*Details Form:*/
@@ -220,4 +222,49 @@ input[type="checkbox"] {
   margin: 3px;
   width: 100%;
   height: 33px;
+}
+
+/*Shipping form*/
+
+.contactShipto {
+  border-radius: 5px;
+  border: solid 0.5px #818181;
+  width: 400px;
+  margin: 35px;
+}
+.contactShipto hr {
+  width: 80%;
+}
+.contactShipto div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-block: 8px;
+  position: relative;
+}
+
+.contactShipto div h4 {
+  margin-inline: 10px;
+  font-size: 14px;
+}
+
+.contactShipto div :last-child {
+  color: #56b280;
+  position: absolute;
+  right: 5px;
+  margin-left: 5px;
+}
+
+.contactShipto div :first-child {
+  color: #818181;
+}
+.contactShipto div input {
+  background-color: transparent;
+  width: 70%;
+  margin-inline: 0;
+}
+
+.contactshipinput {
+  margin-right: 5px;
 }

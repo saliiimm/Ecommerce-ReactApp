@@ -93,30 +93,33 @@ const Modal = () => {
                 different: false,
               }}
               onSubmit={(values) => setFormData(values)}>
-              <div className="formcomplet">{PageDisplay()}</div>
+              <div className="tout">
+                <div className="formcomplet">{PageDisplay()}</div>
+
+                <div className="footer">
+                  <button
+                    className="button-previous"
+                    onClick={() => {
+                      setPage((prev) => prev - 1);
+                    }}>
+                    Back to {FormTitles[page - 1]}
+                  </button>
+                  <button
+                    className="button-next"
+                    onClick={() => {
+                      if (page === FormTitles.length - 1) {
+                        console.log(formData);
+                      } else {
+                        setPage((prev) => prev + 1);
+                      }
+                    }}>
+                    {page === FormTitles.length - 1
+                      ? "Pay Now"
+                      : `Go to ${FormTitles[page + 1]}`}
+                  </button>
+                </div>
+              </div>
             </Formik>
-          </div>
-          <div className="footer">
-            <button
-              className="button-previous"
-              onClick={() => {
-                setPage((prev) => prev - 1);
-              }}>
-              Back to {FormTitles[page - 1]}
-            </button>
-            <button
-              className="button-next"
-              onClick={() => {
-                if (page === FormTitles.length - 1) {
-                  console.log(formData);
-                } else {
-                  setPage((prev) => prev + 1);
-                }
-              }}>
-              {page === FormTitles.length - 1
-                ? "Pay Now"
-                : `Go to ${FormTitles[page + 1]}`}
-            </button>
           </div>
         </div>
         <PriceCoupon />
