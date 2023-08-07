@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Panier.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import Modal from "../../components/modalPayment/Modal";
 import { Link } from "react-router-dom";
 
 const Panier = () => {
@@ -21,7 +22,6 @@ const Panier = () => {
       });
   }, []);
 
-  
   const remove = (id) => {
     const deletes = candles.filter((item) => item.id !== id);
     setCandles(deletes);
@@ -30,6 +30,7 @@ const Panier = () => {
   return (
     <div className="back">
       <Navbar />
+      <Modal />
       <div>
         <h2>Your cart items</h2>
         <Link className="a" to="/">
@@ -53,19 +54,12 @@ const Panier = () => {
             subtotal += parseFloat(total);
 
             return (
-              <div  className="shop">
-                <div className="flexx" >
-                  <img
-                    src={item.image}
-                    className="small"
-                    alt={item.name}
-                  />
+              <div className="shop">
+                <div className="flexx">
+                  <img src={item.image} className="small" alt={item.name} />
                   <div className="pro">
                     <p className="isem">{item.name}</p>
-                    <button
-                      className="remove"
-                      onClick={() => remove(item.id)} 
-                    >
+                    <button className="remove" onClick={() => remove(item.id)}>
                       Remove
                     </button>
                   </div>
@@ -86,9 +80,7 @@ const Panier = () => {
               <h4>Sub-total</h4>
               <h4>${subtotal.toFixed(2)}</h4>
             </div>
-            <p className="p">
-              Tax and shipping cost will be calculated later
-            </p>
+            <p className="p">Tax and shipping cost will be calculated later</p>
           </div>
           <button className="button">Check-out</button>
         </div>

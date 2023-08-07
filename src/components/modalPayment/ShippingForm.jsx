@@ -1,10 +1,10 @@
 import "./Modal.css";
-import { Form, Field } from "formik";
+import { Field } from "formik";
 
 const ShippingForm = ({ formData, setFormData }) => {
   return (
     <div className="DetailsFormContainer">
-      <Form>
+      <div>
         <div className="contactShipto">
           <div>
             <h4>Contact</h4>
@@ -14,7 +14,7 @@ const ShippingForm = ({ formData, setFormData }) => {
           <hr />
           <div>
             <h4>Ship to</h4>
-            <Field className="" />
+            <Field name="fulladress" />
             <h4>Edit</h4>
           </div>
         </div>
@@ -23,7 +23,7 @@ const ShippingForm = ({ formData, setFormData }) => {
           <div className="shipcheck shipmethod">
             <label>
               <div>
-                <input type="radio" />
+                <input type="radio" name="shippingMethod" />
                 <span className="checkmark">Standard Shipping</span>
               </div>
 
@@ -31,7 +31,7 @@ const ShippingForm = ({ formData, setFormData }) => {
             </label>
           </div>
         </div>
-      </Form>
+      </div>
     </div>
   );
 };

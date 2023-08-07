@@ -1,10 +1,10 @@
 import "./Modal.css";
-import { Form, Field, ErrorMessage } from "formik";
+import { Field, ErrorMessage } from "formik";
 
 const DetailsForm = ({ formData, setFormData }) => {
   return (
     <div className="DetailsFormContainer">
-      <Form className="formofXPart">
+      <div className="formofXPart">
         <div className="contactForm">
           <h4>Contact</h4>
           <p>
@@ -18,7 +18,7 @@ const DetailsForm = ({ formData, setFormData }) => {
         />
         <div className="check contact">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" name="newsletter" />
             <span className="checkmark">
               Add me to Candleaf newsletter for a 10% discount
             </span>
@@ -57,9 +57,9 @@ const DetailsForm = ({ formData, setFormData }) => {
               name="province"
               placeholder="Province"
               className="triofield select">
-              <option value="red">Red</option>
-              <option value="green">Green</option>
-              <option value="blue">Blue</option>
+              <option value="Alger">Alger</option>
+              <option value="Oran">Oran</option>
+              <option value="Tamanrasset">Tamanrasset</option>
             </Field>
           </div>
           <Field
@@ -67,20 +67,20 @@ const DetailsForm = ({ formData, setFormData }) => {
             name="country"
             placeholder="Country"
             className="selectCountry">
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
+            <option value="Algerie">Algerie</option>
+            <option value="France">France</option>
+            <option value="Maroc">Maroc</option>
           </Field>
           <div className="check contact">
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" name="checkout" />
               <span className="checkmark">
                 Save this information for a future fast checkout
               </span>
             </label>
           </div>
         </div>
-      </Form>
+      </div>
     </div>
   );
 };

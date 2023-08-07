@@ -5,10 +5,11 @@ import ShippingForm from "./ShippingForm";
 import PaymentForm from "./PaymentForm";
 import PriceCoupon from "./PriceCoupon";
 import { useState } from "react";
-import { Formik } from "formik";
+import { Formik, Form } from "formik";
 
 const Modal = () => {
   const [page, setPage] = useState(1);
+
   const [formData, setFormData] = useState({
     //DetailsForm:
     emailOrNumber: "",
@@ -76,8 +77,10 @@ const Modal = () => {
                 postalCode: "",
                 province: "",
                 country: "",
+                checkout: false,
 
                 //ShippingForm :
+                fulladress: "",
                 contact: "",
                 shipTo: "",
                 shippingMethod: false,
@@ -94,7 +97,9 @@ const Modal = () => {
               }}
               onSubmit={(values) => setFormData(values)}>
               <div className="tout">
-                <div className="formcomplet">{PageDisplay()}</div>
+                <Form>
+                  <div className="formcomplet">{PageDisplay()}</div>
+                </Form>
 
                 <div className="footer">
                   <button

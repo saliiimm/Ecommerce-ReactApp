@@ -126,7 +126,7 @@
   margin: 5px;
   padding: 5px;
   background-color: white;
-  border: solid 1px #56b280;
+  border: solid 1px #818181;
 }
 
 .check label {
@@ -168,9 +168,8 @@ input[type="checkbox"] {
   height: 25px;
   padding: 5px;
   background-color: white;
-  border: solid 1px #56b280;
+  border: solid 1px #818181;
 }
-
 .field-align.three {
   width: 100%;
   display: grid;
@@ -186,56 +185,66 @@ input[type="checkbox"] {
   height: 25px;
   padding: 5px;
   background-color: white;
-  border: solid 1px #56b280;
+  border: solid 1px #818181;
 }
 
-.triofield.select {
+.triofield.select,
+.triofield.select > * {
   position: relative;
-  width: 100%;
+  width: 95%;
   color: black;
   height: 36px;
+  border: solid 1px #818181;
 }
 
-.triofield.select select {
+.triofield.select select,
+.triofield.select option {
   width: 100%;
   padding: 5px;
   background-color: white;
-  border: solid 1px #56b280;
-  appearance: none; /* Remove default styles on the dropdown arrow */
+  border: solid 1px #818181;
+  appearance: none;
   -webkit-appearance: none;
 }
 
 .triofield.select::before {
-  content: "\25BC"; /* Unicode for the dropdown arrow */
+  content: "\25BC";
   position: absolute;
   top: 50%;
   right: 8px;
   transform: translateY(-50%);
-  color: #56b280; /* Arrow color */
-  pointer-events: none; /* Avoid hover/click on the arrow */
+  color: #56b280;
+  pointer-events: none;
 }
 
 .selectCountry {
   background-color: white;
-  border: solid 1px #56b280;
+  border: solid 1px #818181;
   color: black;
   margin: 3px;
-  width: 100%;
+  margin-left: 5px;
+  width: 104%;
   height: 33px;
 }
 
 /*Shipping form*/
 
-.contactShipto {
+.contactShipto,
+.PaymentShipInfos,
+.twochecksbox {
   border-radius: 5px;
   border: solid 0.5px #818181;
   width: 400px;
   margin: 35px;
 }
-.contactShipto hr {
+.contactShipto hr,
+.PaymentShipInfos hr,
+.twochecksbox hr {
   width: 80%;
 }
-.contactShipto div {
+.contactShipto div,
+.PaymentShipInfos div,
+.twochecksbox label {
   width: 100%;
   display: flex;
   align-items: center;
@@ -244,22 +253,26 @@ input[type="checkbox"] {
   position: relative;
 }
 
-.contactShipto div h4 {
+.contactShipto div h4,
+.PaymentShipInfos div h4 {
   margin-inline: 10px;
   font-size: 14px;
 }
 
-.contactShipto div :last-child {
+.contactShipto div :last-child,
+.PaymentShipInfos div :last-child {
   color: #56b280;
   position: absolute;
   right: 5px;
   margin-left: 5px;
 }
 
-.contactShipto div :first-child {
+.contactShipto div :first-child,
+.PaymentShipInfos div :first-child {
   color: #818181;
 }
-.contactShipto div input {
+.contactShipto div input,
+.PaymentShipInfos div input {
   background-color: transparent;
   border: none;
   width: 70%;
@@ -299,4 +312,98 @@ input[type="checkbox"] {
 
 .shipcheck.shipmethod label > span {
   color: #272727;
+}
+
+/*payment form*/
+
+.PaymentShipInfos {
+  border: solid 0.5px #56b280;
+}
+
+.PaymentShipInfos hr {
+  color: #56b280;
+}
+
+.paymentMethod .header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to right, #bbe8bb, #69c069, #66bd8d);
+  color: green;
+  border-radius: 8px 8px 0 0;
+}
+
+.paymentMethod .header > * {
+  margin-inline: 15px;
+}
+.paymentMethod .cardcontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Creditcard {
+  border: 1px solid #818181;
+  border-radius: 9px;
+}
+
+.solofield.payment {
+  width: 90%;
+  border: 0.5px solid #6c6a6a;
+  color: black;
+}
+
+.solofield.payment.first {
+  margin-top: 25px;
+}
+
+.field-align.two.payment {
+  margin-left: 43px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  gap: 2%;
+}
+
+.field-align.two.payment .duofield {
+  width: 87%;
+  border: 0.5px solid #6c6a6a;
+}
+
+.taxInformations .solofield {
+  border: 0.5px solid #6c6a6a;
+  width: 87%;
+}
+
+.DetailsFormContainer.payment {
+  margin-top: 0px;
+}
+
+.billingAddress {
+  margin-bottom: 105px;
+}
+
+.twochecksbox hr {
+  width: 90%;
+}
+
+.twochecksbox {
+  margin: 0;
+}
+.twochecksbox input {
+  margin-left: 15px;
+}
+
+.checkmark.payment {
+  font-size: 14px;
+  margin-left: 25px;
+}
+
+.billingAddress,
+.taxInformations,
+.paymentMethod {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
 }
