@@ -1,7 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto:wght@500&display=swap');
+
+
 .pricecoupon {
   display: flex;
+flex-direction: column;
+align-items: start;
+background: #F2F2F2;
+padding-left: 100px;
+
+flex-shrink: 0;
+}
+.box {
+  display: flex;
+  gap: 60px;
+ 
+  
+}
+.box-container{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.infobox{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: start;
+}
+.titre{
+  color: var(--black, #272727);
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: 'Poppins', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 57.6px; /* 360% */
+letter-spacing: -0.9px;
+}
+.prix{
+  color: var(--green, #56B280);
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: 'Poppins', sans-serif;
+font-size: 21px;
+font-style: normal;
+font-weight: 600;
+line-height: 57.6px; /* 274.286% */
+letter-spacing: -0.9px;
+}
+.box img{
+  width: 160px;
+height: 120px;
+flex-shrink: 0;
+background-color: #f7f8fa;
+}
+.pricecoupon hr{
+  
+background: rgba(86, 178, 128, 0.20);
+background: rgba(86, 178, 128, 0.20);
+margin: 20px 0px;
+
+width: 410.001px;
+
+}
+.coupons{
+  display: flex;
+  gap: 10px;
   align-items: center;
+}
+.coupons input{
+  width: 285px;
+height: 40px;
+border: 0.5px solid #898989;
+background: #FFF;
+font-size: 17.65px;
+}
+.coupons button{
+  display: flex;
+  width: 116px;
+  height: 45px;
+  border: none;
+
   justify-content: center;
-  background-color: #f7f8fa;
-  color: black;
+  align-items: center;
+  border-radius: 4px;
+background: #A8A8A8;
+color: #FFF;
+text-align: center;
+font-family: 'Poppins', sans-serif;
+font-size: 17.65px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.subtotal{
+ 
+display: flex;
+justify-content: space-between;
+
+}
+.shiping{
+  display: flex;
+justify-content: space-between;
+
+}
+.calcultotal{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--black, #272727);
+  text-align: right;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25.6px; /* 182.857% */
+  letter-spacing: -0.9px;
+  width: 410.001px;
+}
+.total{
+  display: flex;
+ justify-content: space-between;
+  color: var(--black, #272727);
+  text-align: right;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25.6px; /* 182.857% */
+  letter-spacing: -0.9px;
+  width: 410.001px;
+}
+.prixtotal{
+  color: var(--black, #272727);
+text-align: right;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 25.6px; /* 106.667% */
+letter-spacing: -0.9px;
 }

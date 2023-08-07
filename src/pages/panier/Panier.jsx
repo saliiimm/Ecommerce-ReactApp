@@ -44,7 +44,7 @@ const Panier = () => {
   return (
     <div className="back">
       <Navbar />
-      <Modal />
+      <Modal candels={candles} />
       <div>
         <h2>Your cart items</h2>
         <Link className="a" to="/">

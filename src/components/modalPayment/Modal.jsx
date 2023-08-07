@@ -7,7 +7,7 @@ import PriceCoupon from "./PriceCoupon";
 import { useState } from "react";
 import { Formik, Form } from "formik";
 
-const Modal = () => {
+const Modal = (props) => {
   const [page, setPage] = useState(1);
 
   const [formData, setFormData] = useState({
@@ -127,7 +127,7 @@ const Modal = () => {
             </Formik>
           </div>
         </div>
-        <PriceCoupon />
+        <PriceCoupon candels={props.candels} />
       </div>
     </div>
   );
