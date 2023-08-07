@@ -261,10 +261,42 @@ input[type="checkbox"] {
 }
 .contactShipto div input {
   background-color: transparent;
+  border: none;
   width: 70%;
-  margin-inline: 0;
 }
 
 .contactshipinput {
-  margin-right: 5px;
+  position: absolute;
+  left: 67px;
+}
+
+.shippingMethod {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 35px;
+  margin-bottom: 200px;
+}
+
+.shippingMethod h4 {
+  margin: 0;
+}
+.shipcheck.shipmethod {
+  border-radius: 5px;
+  border: solid 0.5px #818181;
+  width: 400px;
+  margin: 15px 0 45px 0;
+}
+
+.shipcheck.shipmethod label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+  font-size: 14px;
+}
+
+.shipcheck.shipmethod label > span {
+  color: #56b280;
 }

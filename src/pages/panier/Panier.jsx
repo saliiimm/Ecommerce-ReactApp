@@ -1,12 +1,17 @@
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import "./Panier.css"
+import Modal from "../../components/modalPayment/Modal";
+import "./Panier.css";
 import { Link } from "react-router-dom";
-const Panier = ({ cartItems }) => {
- 
-
+const Panier = () => {
   return (
-    < div className="back" >
+    <>
+      <Navbar />
+      <Modal />
+      <Footer />
+    </>
+
+    /*< div className="back" >
       <Navbar />
       <div>
         <h2  >Your card items</h2>
@@ -44,9 +49,8 @@ const Panier = ({ cartItems }) => {
         </div>
       </div>
       <Footer />
-    </div>
+          </div>*/
   );
 };
 
 export default Panier;
-

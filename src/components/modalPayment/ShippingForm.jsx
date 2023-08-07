@@ -19,11 +19,14 @@ const ShippingForm = ({ formData, setFormData }) => {
           </div>
         </div>
         <div className="shippingMethod">
-          <h2>Shipping method</h2>
-          <div className="shipcheck">
+          <h4>Shipping method</h4>
+          <div className="shipcheck shipmethod">
             <label>
-              <input type="checkbox" />
-              <span className="checkmark">Standard Shipping</span>
+              <div>
+                <input type="radio" />
+                <span className="checkmark">Standard Shipping</span>
+              </div>
+
               <span>Free</span>
             </label>
           </div>
