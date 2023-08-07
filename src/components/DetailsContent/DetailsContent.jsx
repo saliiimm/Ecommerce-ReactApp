@@ -6,7 +6,9 @@ import { AiOutlinePlus,AiOutlineLine } from "react-icons/ai";
 const DetailsContent = (props) => {
   const [qnt, setqnt] = useState(1);
   const candle=props.candle[0];
-
+  const handleAddToCartClick = () => {
+    props.onAddToCart(candle); // Pass the selected candle to the Add to Cart function
+  };
   return (
     <div className="details">
       <div className="left-home">
@@ -54,7 +56,9 @@ const DetailsContent = (props) => {
             </div>
           
           </div>
-           <button className="btn">   <BsCart3/> + Add to cart</button>
+          <button className="btn" onClick={handleAddToCartClick}>
+        <BsCart3 /> + Add to cart
+      </button>
           <div className="productDetails">
         <div className="ligne1"> <span className="span">Wax</span>: {candle && candle.wax? candle.wax:"Top grade Soy wax that delivers a smoke less,  consistent burn"}</div>
          <div className="ligne2"> <span className="span">Fragrance</span>
