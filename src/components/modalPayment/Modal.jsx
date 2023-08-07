@@ -4,11 +4,25 @@ import DetailsForm from "./DetailsForm";
 import ShippingForm from "./ShippingForm";
 import PaymentForm from "./PaymentForm";
 import PriceCoupon from "./PriceCoupon";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Formik, Form } from "formik";
 
-const Modal = () => {
+const Modal = ({ onClose }) => {
   const [page, setPage] = useState(1);
+
+  const ModelRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ModelRef.current && !ModelRef.current.contains(event.target)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ModelRef]);
 
   const [formData, setFormData] = useState({
     //DetailsForm:
@@ -52,7 +66,7 @@ const Modal = () => {
   };
   return (
     <div className="modal-overlay">
-      <div className="modal">
+      <div className="modal" ref={ModelRef}>
         <div className="form">
           <div className="progressBar">
             <img src={logoNav} alt="CandleLeafLogo" />
@@ -105,7 +119,11 @@ const Modal = () => {
                   <button
                     className="button-previous"
                     onClick={() => {
-                      setPage((prev) => prev - 1);
+                      if (page === 1) {
+                        onClose();
+                      } else {
+                        setPage((prev) => prev - 1);
+                      }
                     }}>
                     Back to {FormTitles[page - 1]}
                   </button>
@@ -114,6 +132,7 @@ const Modal = () => {
                     onClick={() => {
                       if (page === FormTitles.length - 1) {
                         console.log(formData);
+                        onClose();
                       } else {
                         setPage((prev) => prev + 1);
                       }

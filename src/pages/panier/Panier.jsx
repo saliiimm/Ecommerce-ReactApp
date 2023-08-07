@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const Panier = () => {
   const [candles, setCandles] = useState([]);
+  const [isModalVisible, setIsModalVisible] = useState(false);
   let subtotal = 0;
 
   useEffect(() => {
@@ -41,10 +42,18 @@ const Panier = () => {
     setCandles(deletes);
   };
 
+  const openModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false);
+  };
+
   return (
     <div className="back">
       <Navbar />
-      <Modal />
+      {isModalVisible && <Modal onClose={closeModal} />}
       <div>
         <h2>Your cart items</h2>
         <Link className="a" to="/">
@@ -104,7 +113,14 @@ const Panier = () => {
             </div>
             <p className="p">Tax and shipping cost will be calculated later</p>
           </div>
-          <button className="button">Check-out</button>
+          <button
+            className="button"
+            onClick={() => {
+              setIsModalVisible(true);
+              openModal();
+            }}>
+            Check-out
+          </button>
         </div>
       </div>
       <Footer />
