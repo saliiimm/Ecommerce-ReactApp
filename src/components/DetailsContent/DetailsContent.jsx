@@ -12,16 +12,17 @@ const DetailsContent = (props) => {
       id: candle.key, // Assurez-vous d'avoir une propriété unique pour chaque article
       name: candle.candleName,
       price: candle.price,
-      quantity: qnt,
+      quantity: `${qnt}`,
     };
+    console.log(candle);
 
     const updatedCart = [...cart, newItem]; // Créer une nouvelle copie du panier avec le nouvel élément
     setCart(updatedCart); // Mettre à jour l'état local du panier
 
     // Mise à jour de la base de données JSON (vous pouvez également utiliser une API pour cela)
-    const updatedCartData = { achats: [...cart, newItem] };
-    fetch("/panier.json", {
-      method: "PUT",
+    const updatedCartData = newItem ;
+    fetch("http://localhost:3000/achats", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },

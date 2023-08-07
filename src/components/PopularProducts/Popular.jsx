@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../productsHome/Products.css";
+import { Link } from "react-router-dom";
 
 const Popular = () => {
   const [candles, setCandles] = useState([]);
@@ -33,6 +34,7 @@ const Popular = () => {
       <p>Our top selling product that you may like </p>
       <div className="productCards">
         {randomCandles.map((candle, index) => (
+        <Link to={`/details/${candle.key}`}>
           <div key={index} className="card">
             <img src={candle.image} alt={candle.candleName} />
             <div className="info">
@@ -43,7 +45,7 @@ const Popular = () => {
                 <p>{candle.price}$</p>
               </div>
             </div>
-          </div>
+          </div></Link>
         ))}
       </div>
     </div>

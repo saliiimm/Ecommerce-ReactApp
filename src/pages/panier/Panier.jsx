@@ -1,18 +1,34 @@
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Modal from "../../components/modalPayment/Modal";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./Panier.css";
 import { Link } from "react-router-dom";
 
 const Panier = () => {
-  return (
-    <>
-      <Navbar />
-      <Modal />
-      <Footer />
-    </>
+  const [candles, setCandles] = useState([]);
 
-    /*< div className="back" >
+  useEffect(() => {
+    axios
+      .get("panier.json")
+      .then((response) => {
+        const data = response.data;
+        setCandles(data.achats);
+        console.log(candles);
+     
+       
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    
+  }, []);
+  
+  return (
+   
+
+    < div className="back" >
       <Navbar />
       <div>
         <h2  >Your card items</h2>
@@ -29,7 +45,14 @@ const Panier = () => {
         </div>
         <hr className="hr" />
         <div>
+        {candles.map((item) => (
+          
+            <div key={item.id}>
+              <p>{item.name}</p>
+              <p>${item.price}</p>
         
+            </div>
+          ))}
         </div>
         <hr className="hr" />
         <div className="rights">
@@ -44,7 +67,7 @@ const Panier = () => {
         </div>
       </div>
       <Footer />
-          </div>*/
+          </div>
   );
 };
 
