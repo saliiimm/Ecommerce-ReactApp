@@ -1,0 +1,37 @@
+
+  .aligns{
+    display: flex;
+    align-items: center;
+    margin-top: -4%;
+    text-align: center;
+  }
+  
+  .accueil-introduction {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+   
+  }
+.h1{
+    font-size: 36px;
+}
+.h2{
+   color: rgb(92, 171, 92);
+   margin-top: -6%;
+   font-size: 17px;
+}
+.leftcandle{
+    margin-top: 5%;
+    width: 700px;
+}
+.imagecandle{
+    width: 500px;
+}
+.spans{
+  font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+   
+}
+ 
