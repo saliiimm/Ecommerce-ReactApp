@@ -3,7 +3,7 @@
     color: black;
 }
 .a{
-    color: rgb(79, 205, 79);
+    color: var(--green, #56B280);
    text-decoration: underline !important ;
    font-size: 12px;
 }
@@ -18,25 +18,29 @@
     justify-content: space-between;
 }
 .button{
-    background-color: rgb(79, 205, 79);
+
     border: none;
     border-radius: 4px;
-    width: 123px;
-    height: 27px;
-    margin-left: 50px;
+    background: var(--green, #56B280);
+    width: 194px;
+    height: 40px;
+    padding:  8px 44px;
     color: white;
     font-weight: 600;
-}
-.button:hover{
+    transition: 0.2s;
+  }
+  .button:hover{
     background-color: white;
-    color: rgb(79, 205, 79);
-    border: 1px solid rgb(79, 205, 79) ;
-}
+    color: var(--green, #56B280);
+    border: 1px solid var(--green, #56B280) ;
+  }
 .rights{
     display: flex;
     justify-content: flex-end;
     margin-right: 4.5%;
     align-items: center;
+    gap: 70PX
+    ;
 }
 .pay {
     display: flex;

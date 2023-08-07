@@ -1,9 +1,14 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto:wght@500&display=swap');
+
+
   .aligns{
     display: flex;
     align-items: center;
     margin-top: -4%;
     text-align: center;
+    white-space: nowrap;
   }
   
   .accueil-introduction {
@@ -12,15 +17,19 @@
     max-width: 1000px;
     margin: auto;
     text-align: left;
+    font-family: 'Poppins', sans-serif;
    
   }
 .h1{
     font-size: 36px;
+    padding-bottom: 10px;
 }
 .h2{
    color: rgb(92, 171, 92);
    margin-top: -6%;
    font-size: 17px;
+   margin-bottom: 30px;
+   
 }
 .leftcandle{
     margin-top: 5%;
@@ -32,6 +41,10 @@
 .spans{
   font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
-   
+   display: flex;
+   gap: 5px;
+   align-items: center;
 }
+
+
  
