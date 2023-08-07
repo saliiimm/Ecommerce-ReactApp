@@ -1,0 +1,37 @@
+.green{
+    background-color: rgb(222, 234, 222) ;
+   padding: 5% 15% 5% 15%;
+}
+.card-feed{
+    width: 300px;
+    background-color: white;
+}
+.greens{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.star{
+    color: rgba(178, 178, 178, 0.712);
+    font-size: 20px;
+}
+.stars{
+    font-size: 20px;
+    color: rgb(54, 199, 54);
+}
+.feedname{
+    color: rgb(175, 172, 172);
+}
+.feedb{
+    font-weight: 500;
+
+}
+.titlef{
+    font-size: 40px;
+}
+.titlep{
+    font-size: 15px;
+    color: rgb(120, 117, 117);
+   margin-top: -4%;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
