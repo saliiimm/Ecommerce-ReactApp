@@ -5,10 +5,31 @@ import { BsCart3 } from "react-icons/bs";
 import { AiOutlinePlus,AiOutlineLine } from "react-icons/ai";
 const DetailsContent = (props) => {
   const [qnt, setqnt] = useState(1);
+  const [cart, setCart] = useState([]); // État local pour le panier
   const candle=props.candle[0];
   const handleAddToCartClick = () => {
-    props.onAddToCart(candle); // Pass the selected candle to the Add to Cart function
+    const newItem = {
+      id: candle.id, // Assurez-vous d'avoir une propriété unique pour chaque article
+      name: candle.candleName,
+      price: candle.price,
+      quantity: qnt
+    };
+  
+    const updatedCart = [...cart, newItem]; // Créer une nouvelle copie du panier avec le nouvel élément
+    setCart(updatedCart); // Mettre à jour l'état local du panier
+  
+    // Mise à jour de la base de données JSON (vous pouvez également utiliser une API pour cela)
+    const updatedCartData = { achats: [...cart, newItem] };
+    fetch('panier.json', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updatedCartData)
+    });
   };
+  
+  
   return (
     <div className="details">
       <div className="left-home">

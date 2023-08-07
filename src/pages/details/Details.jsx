@@ -34,7 +34,6 @@ const Details = () => {
     <>
       <Navbar />
       <DetailsContent onAddToCart={handleAddToCart} candle={candles} cartItems={cartItems}/>
-      <Panier cartItems={cartItems} /> 
       <Footer />
     </>
   );

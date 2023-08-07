@@ -3,6 +3,7 @@ import Footer from "../../components/footer/Footer";
 import Modal from "../../components/modalPayment/Modal";
 import "./Panier.css";
 import { Link } from "react-router-dom";
+
 const Panier = () => {
   return (
     <>
@@ -28,13 +29,7 @@ const Panier = () => {
         </div>
         <hr className="hr" />
         <div>
-          {cartItems.map((item) => (
-            <div key={item.key}>
-              <p>{item.candleName}</p>
-              <p>${item.price}</p>
         
-            </div>
-          ))}
         </div>
         <hr className="hr" />
         <div className="rights">
