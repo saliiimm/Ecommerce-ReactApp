@@ -156,7 +156,7 @@ const Modal = (props) => {
             </Formik>
           </div>
         </div>
-        <PriceCoupon candels={props.candels} />
+        <PriceCoupon candels={props.candels} page={page} />
       </div>
     </div>
   );

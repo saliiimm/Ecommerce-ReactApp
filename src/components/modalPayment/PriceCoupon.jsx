@@ -3,6 +3,7 @@ import "./PriceCoupon.css";
 const PriceCoupon = (props) => {
   let subtotal = 0;
   const candels=props.candels;
+  console.log(props.page);
   
   return <div className="pricecoupon">
   <div className="box-container">
@@ -22,12 +23,17 @@ const PriceCoupon = (props) => {
 )})}
 
   </div>
+ 
+  {props.page !== 4 && (
+    <> <hr />
+        <div className="coupons">
+          <input type="text" name="" id="" />
+          <button>Add code</button>
+        </div>
+        </>
+      )}
   <hr />
-  <div className="coupons">
-    <input type="text" name="" id="" />
-    <button>Add code</button>
-  </div>
-  <hr />
+ 
   <div className="calcultotal">
     <div className="subtotal"><span >Subtotal</span> <span >${subtotal}</span></div>
     <div className="shiping"><span>Shipping</span> <span>Free Shipping</span></div>

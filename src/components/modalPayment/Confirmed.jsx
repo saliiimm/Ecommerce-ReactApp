@@ -8,22 +8,28 @@ const Confirmed = (props) => {
 
  
   
-  const handleDelete = () => {
-   
-   candles.map((candel)=>{
-    fetch(`http://localhost:3000/achats/${candel.id}`, {
-      method: "DELETE",
-    }).then((response) => {
-      if (response.ok) {
-        console.log(`Article avec ID ${candel.id} supprimé avec succès.`);
-      } else {
-        console.error(
-          `Erreur lors de la suppression de l'article avec ID ${candel.id}.`
-        );
-      }
+  useEffect(() => {
+    candles.map((candel) => {
+      fetch(`http://localhost:3000/achats/${candel.id}`, {
+        method: 'DELETE',
+      })
+        .then((response) => {
+          if (response.ok) {
+            console.log(`Article avec ID ${candel.id} supprimé avec succès.`);
+          } else {
+            console.error(
+              `Erreur lors de la suppression de l'article avec ID ${candel.id}.`
+            );
+          }
+        })
+        .catch((error) => {
+          console.error(
+            `Erreur lors de la suppression de l'article avec ID ${candel.id}:`,
+            error
+          );
+        });
     });
-   })
-  };
+  }, []); // 
 
   return (
     <div className="DetailsFormContainer">
