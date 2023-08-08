@@ -65,6 +65,7 @@ const Modal = (props) => {
     } else if (page === 4) {
       return (
         <Confirmed
+        candels={props.candels} 
           formData={formData}
           setFormData={setFormData}
           onClose={props.onClose}

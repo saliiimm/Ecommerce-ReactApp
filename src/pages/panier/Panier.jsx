@@ -11,7 +11,7 @@ const Panier = () => {
   const [candles, setCandles] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
   let subtotal = 0;
-
+ 
   useEffect(() => {
     axios
       .get("panier.json")

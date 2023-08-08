@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { GiConfirmed } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
-const Confirmed = ({ onClose }) => {
+const Confirmed = (props) => {
+  const [candles, setCandles] = useState(props.candels);
+
+ 
+  
+  const handleDelete = () => {
+   
+   candles.map((candel)=>{
+    fetch(`http://localhost:3000/achats/${candel.id}`, {
+      method: "DELETE",
+    }).then((response) => {
+      if (response.ok) {
+        console.log(`Article avec ID ${candel.id} supprimé avec succès.`);
+      } else {
+        console.error(
+          `Erreur lors de la suppression de l'article avec ID ${candel.id}.`
+        );
+      }
+    });
+   })
+  };
+
   return (
     <div className="DetailsFormContainer">
       <div className="confirmedpanier">
@@ -19,7 +41,8 @@ const Confirmed = ({ onClose }) => {
             <button
               className="button-next"
               onClick={() => {
-                onClose();
+                props.onClose();
+                handleDelete()
               }}>
               Back to shipping
             </button>
