@@ -1,5 +1,4 @@
 #root {
- 
   height: auto;
   text-align: center;
 }
@@ -30,4 +29,9 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+button,
+input[type="button"] {
+  cursor: pointer;
 }

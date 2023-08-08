@@ -6,7 +6,9 @@ nav {
   height: 70px;
   background-color: white;
   color: black;
-  border-bottom: rgba(86, 178, 128, 0.20) solid 1px;
+  position: fixed;
+  z-index: 1;
+  border-bottom: rgba(86, 178, 128, 0.2) solid 1px;
 }
 .centre {
   display: flex;
