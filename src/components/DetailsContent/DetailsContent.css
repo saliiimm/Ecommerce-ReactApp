@@ -1,5 +1,5 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto:wght@500&display=swap');
 
 
@@ -9,7 +9,7 @@
     padding-left: 172px;
     margin-right: 172px;
     padding-bottom: 114px;
-    
+    padding-top: 7%;
 }
 .left-home{
     width: 50%;
