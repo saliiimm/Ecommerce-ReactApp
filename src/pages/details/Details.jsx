@@ -4,7 +4,8 @@ import DetailsContent from "../../components/DetailsContent/DetailsContent";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import Panier from "../panier/Panier";
+
+
 const Details = () => {
   const [candles, setCandles] = useState([]);
   const [cartItems, setCartItems] = useState([]); 

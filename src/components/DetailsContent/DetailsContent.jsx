@@ -3,7 +3,32 @@ import "./DetailsContent.css";
 import { useState, useEffect } from "react";
 import { BsCart3 } from "react-icons/bs";
 import { AiOutlinePlus, AiOutlineLine } from "react-icons/ai";
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import { MdShoppingCartCheckout } from "react-icons/md";
+
+const style = {
+  position: 'absolute' ,
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 500,
+  bgcolor: 'background.paper',
+  borderRadius: '10px ',
+  boxShadow: 24,
+  display:"flex",
+  flexDirection:"column",
+  alignItems: "center",
+  justifyContent: "center",
+  p: 4,
+};
 const DetailsContent = (props) => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const [qnt, setqnt] = useState(1);
   const [cart, setCart] = useState([]); // État local pour le panier
   const candle = props.candle[0];
@@ -36,6 +61,25 @@ const DetailsContent = (props) => {
   return (
     <div className="details">
       <div className="left-home">
+     
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+         C'est dans votre panier
+          </Typography>
+         <MdShoppingCartCheckout/>
+        <div className="btns">
+        <Link to="/panier"> <button className="button">Valider le Panier</button></Link>
+        <button className="button" onClick={handleClose}>Conitinuer les achats</button>
+        </div>
+        </Box>
+      </Modal>
+ 
         <div className="image">
           <img
             src={
@@ -95,7 +139,7 @@ const DetailsContent = (props) => {
               </p>
             </div>
           </div>
-          <button className="btn" onClick={handleAddToCartClick}>
+          <button className="btn" onClick={()=>{handleAddToCartClick();handleOpen()}}>
             <BsCart3 /> + Add to cart
           </button>
           <div className="productDetails">

@@ -25,3 +25,20 @@ nav {
 a {
   color: black;
 }
+.icone{
+  position: relative;
+}
+.qntte{
+  position: absolute;
+  color: white;
+  background-color: var(--green, #56B280);
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12px;
+  width: 12px;
+  border-radius:50% ;
+  top: -5px;
+  left: 15px;
+}
