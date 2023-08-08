@@ -1,10 +1,23 @@
 import "./Navbar.css";
 import { BsFillPersonFill,BsCart3 } from "react-icons/bs";
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import logoNav from "../../assets/logoNav.svg";
 const Navbar = () => {
-   
+  const [candles, setCandles] = useState([]);
+  useEffect(() => {
+    axios
+      .get("panier.json")
+      .then((response) => {
+        const data = response.data;
+        setCandles(data.achats);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, [candles]);
+  
   return (
     <nav>
       <div className="partieGauche">
@@ -21,7 +34,8 @@ const Navbar = () => {
         <Link>
           <BsFillPersonFill />
         </Link>
-        <Link to="/panier">
+        <Link to="/panier" className="icone">
+     <div className="qntte"> {candles.length}</div>
           <BsCart3/>
         </Link>
       </div>

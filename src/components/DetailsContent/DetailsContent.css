@@ -41,6 +41,11 @@ flex-shrink: 0;
     
    
 }
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .image{
     height: 433px;
     background: #F7F8FA;
@@ -249,4 +254,19 @@ font-style: normal;
 font-weight: 700;
 line-height: 25.6px;
 letter-spacing: -0.9px;
+}
+.css-1rxknh2 svg{
+    width: 200px;
+    height: 200px;
+    color: #56B280;
+}
+.css-1rxknh2 h2{
+    color: var(--green, #56B280);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25.6px;
+    letter-spacing: -0.9px;
 }
