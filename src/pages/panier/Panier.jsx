@@ -4,6 +4,7 @@ import "./Panier.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Modal from "../../components/modalPayment/Modal";
+import panierData from "../../../panier.json"; // Import the JSON data
 import { Link } from "react-router-dom";
 
 const Panier = () => {

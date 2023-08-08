@@ -1,8 +1,7 @@
 /*modal:*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto:wght@500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto:wght@500&display=swap");
 
 .modal-overlay {
   position: fixed;
@@ -27,8 +26,7 @@
   overflow: auto;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  font-family: 'Roboto', sans-serif;
-  
+  font-family: "Roboto", sans-serif;
 }
 
 .form {
@@ -72,14 +70,12 @@
 
 .button-next {
   border-radius: 4px;
-  background: var(--green, #56B280);
+  background: var(--green, #56b280);
   height: 30px;
   color: white;
   border: none;
   width: 150px;
   cursor: pointer;
-  
-  
 }
 
 .button-previous {
@@ -415,4 +411,38 @@ input[type="checkbox"] {
   align-items: start;
   justify-content: start;
   flex-direction: column;
+}
+
+/*Confirmed*/
+
+.confirmedpanier h2 {
+  font-size: 30px;
+  margin-block: 15px;
+}
+
+.confirmedpanier h5 {
+  font-size: 15px;
+  color: #56b280;
+  margin: 0;
+}
+
+.confirmedpanier p {
+  font-size: 12px;
+  color: #6c6a6a;
+  margin-bottom: 40px;
+}
+
+.confirmedpanier div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmedpanier div button {
+  margin: 15px;
+}
+
+.confirmedpanier div .button-next {
+  width: 200px;
 }

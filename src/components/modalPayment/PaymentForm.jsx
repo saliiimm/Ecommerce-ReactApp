@@ -15,7 +15,7 @@ const PaymentForm = () => {
           <hr />
           <div>
             <h4>Ship to</h4>
-            <Field className="fulladress" />
+            <Field className="fulladress" name="fulladress" />
             <h4>Edit</h4>
           </div>
           <hr />
