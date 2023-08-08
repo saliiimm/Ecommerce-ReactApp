@@ -55,7 +55,7 @@ const Panier = () => {
     <div className="back">
       <Navbar />
       {isModalVisible && <Modal candels={candles} onClose={closeModal} />}
-      <div>
+      <div className="topp">
         <h2>Your cart items</h2>
         <Link className="a" to="/">
           Back to shopping

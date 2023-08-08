@@ -3,6 +3,9 @@
     color: black;
     
 }
+.topp{
+    padding-top: 7%;
+}
 .a{
     color: var(--green, #56B280);
    text-decoration: underline !important ;
@@ -13,6 +16,7 @@
     justify-content: space-between;
     margin: 5%;
     height: 50px;
+   
 }
 .shopp{
     display: flex;
@@ -105,4 +109,3 @@
 .cartitem{
     margin-bottom: -3%;
 }
-
